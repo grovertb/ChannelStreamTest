@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.gtb.crypt.CanalActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:singleLine="true"
+            android:id="@+id/txtnombre" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Color"
+            android:singleLine="true"
+            android:id="@+id/txtcolor" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Posicion"
+            android:singleLine="true"
+            android:id="@+id/txtposicion" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Url"
+            android:singleLine="true"
+            android:id="@+id/txturl" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado"
+            android:id="@+id/switchestado" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEST"
+            android:id="@+id/btntest"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="10sp"/>
+        <include
+            layout="@layout/giraffe_player"
+            android:layout_width="match_parent"
+            android:layout_height="210dp" />
+    </LinearLayout>
+</ScrollView>

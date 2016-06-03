@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Canales Tv Peruana</string>
+    <string name="activity_encript">Encriptar</string>
+    <string name="texto">{version:1}</string>
+</resources>

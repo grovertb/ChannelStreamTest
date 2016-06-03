@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.grovertb.react.myapplication.MainActivity">
+    <item
+        android:id="@+id/action_add"
+        android:orderInCategory="100"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="Personalizado"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_verificar"
+        android:orderInCategory="100"
+        android:icon="@android:drawable/stat_notify_sync_noanim"
+        android:title="Verificar"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_generar"
+        android:orderInCategory="100"
+        android:icon="@android:drawable/stat_sys_upload_done"
+        android:title="Generar"
+        app:showAsAction="always" />
+</menu>
