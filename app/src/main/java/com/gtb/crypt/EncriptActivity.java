@@ -12,7 +12,7 @@ import com.scottyab.aescrypt.AESCrypt;
 import java.security.GeneralSecurityException;
 
 public class EncriptActivity extends AppCompatActivity {
-    EditText txtContent,txtresult;
+    EditText txtContent,txtresult,txtPassCrypt;
     Button btncript,btndecript;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class EncriptActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         txtContent = (EditText) findViewById(R.id.txtcontent);
+        txtPassCrypt = (EditText) findViewById(R.id.txtPassCrypt);
         txtresult = (EditText) findViewById(R.id.txtresult);
         btncript   = (Button) findViewById(R.id.btncript);
         btndecript = (Button) findViewById(R.id.btndecript);
@@ -30,7 +31,7 @@ public class EncriptActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    String decryptmsj = AESCrypt.decrypt ("droidplayer", txtContent.getText().toString());
+                    String decryptmsj = AESCrypt.decrypt (txtPassCrypt.getText().toString(), txtContent.getText().toString());
                     txtresult.setText(decryptmsj);
                 }catch (GeneralSecurityException e){
                     e.printStackTrace();
@@ -41,7 +42,7 @@ public class EncriptActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    String encryptmsj = AESCrypt.encrypt("droidplayer", txtContent.getText().toString());
+                    String encryptmsj = AESCrypt.encrypt(txtPassCrypt.getText().toString(), txtContent.getText().toString());
                     txtresult.setText(encryptmsj);
                 }catch (GeneralSecurityException e){
                     e.printStackTrace();

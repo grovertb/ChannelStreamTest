@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.grovertb.react.myapplication.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_save"
         android:orderInCategory="100"
-        android:icon="@android:drawable/ic_input_add"
+        android:icon="@android:drawable/ic_menu_save"
         android:title="Guardar"
         app:showAsAction="always" />
 </menu>

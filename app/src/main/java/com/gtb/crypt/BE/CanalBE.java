@@ -9,17 +9,19 @@ public class CanalBE {
     private String stream;
     private String colorCard;
     private Boolean estado;
+    private Integer tipo;
     private Integer posicion;
 
     public CanalBE() {
     }
 
-    public CanalBE(Integer codigo, String name, String stream, String colorCard, Boolean estado, Integer posicion) {
+    public CanalBE(Integer codigo, String name, String stream, String colorCard, Boolean estado, Integer tipo, Integer posicion) {
         this.codigo = codigo;
         this.name = name;
         this.stream = stream;
         this.colorCard = colorCard;
         this.estado = estado;
+        this.tipo = tipo;
         this.posicion = posicion;
     }
 
@@ -61,6 +63,14 @@ public class CanalBE {
 
     public void setEstado(Boolean estado) {
         this.estado = estado;
+    }
+
+    public Integer getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(Integer tipo) {
+        this.tipo = tipo;
     }
 
     public Integer getPosicion() {

@@ -37,6 +37,12 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Tipo (1-2-3-4)"
+            android:singleLine="true"
+            android:id="@+id/txttipo" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:hint="Url"
             android:singleLine="true"
             android:id="@+id/txturl" />

@@ -119,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
                         msgIntent.putExtra("getUrl", oCanalAdapter.getItem(index).getStream());
                         msgIntent.putExtra("getColor", oCanalAdapter.getItem(index).getColorCard());
                         msgIntent.putExtra("getEstado", oCanalAdapter.getItem(index).getEstado());
+                        msgIntent.putExtra("getTipo", oCanalAdapter.getItem(index).getTipo());
                         msgIntent.putExtra("getPosicion", oCanalAdapter.getItem(index).getPosicion());
                         startActivity(msgIntent);
                         for (AlertDialog dialogse : dialogs)

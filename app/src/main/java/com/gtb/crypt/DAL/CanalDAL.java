@@ -47,6 +47,7 @@ public class CanalDAL {
                     oCanalBE.setStream(ocursor.isNull(ocursor.getColumnIndex("stream")) ? "" : ocursor.getString(ocursor.getColumnIndex("stream")));
                     oCanalBE.setColorCard(ocursor.isNull(ocursor.getColumnIndex("colorCard")) ? "" : ocursor.getString(ocursor.getColumnIndex("colorCard")));
                     oCanalBE.setEstado(!ocursor.isNull(ocursor.getColumnIndex("Estado")) && value);
+                    oCanalBE.setTipo(ocursor.isNull(ocursor.getColumnIndex("Tipo")) ? 0 : ocursor.getInt(ocursor.getColumnIndex("Tipo")));
                     oCanalBE.setPosicion(ocursor.isNull(ocursor.getColumnIndex("Posicion")) ? 0 : ocursor.getInt(ocursor.getColumnIndex("Posicion")));
 
                     lstCanales.add(new CanalBE(oCanalBE.getCodigo(),
@@ -54,6 +55,7 @@ public class CanalDAL {
                             oCanalBE.getStream(),
                             oCanalBE.getColorCard(),
                             oCanalBE.getEstado(),
+                            oCanalBE.getTipo(),
                             oCanalBE.getPosicion()
                     ));
                 }while(ocursor.moveToNext());
@@ -75,6 +77,7 @@ public class CanalDAL {
             cv.put("stream", oCanalBE.getStream());
             cv.put("colorCard", oCanalBE.getColorCard());
             cv.put("Estado", oCanalBE.getEstado());
+            cv.put("Tipo", oCanalBE.getTipo());
             cv.put("Posicion", oCanalBE.getPosicion());
             DataBaseHelper.myDataBase.insert("canal", "Codigo", cv);
         }catch (Exception ex){
@@ -97,18 +100,13 @@ public class CanalDAL {
             cv.put("stream", oCanalBE.getStream());
             cv.put("colorCard", oCanalBE.getColorCard());
             cv.put("Estado", oCanalBE.getEstado());
+            cv.put("Tipo", oCanalBE.getTipo());
             cv.put("Posicion", oCanalBE.getPosicion());
             DataBaseHelper.myDataBase.update("canal", cv, "Codigo = ?", new String[]{String.valueOf(oCanalBE.getCodigo())});
         }catch (Exception ex){
             ex.printStackTrace();
         }
     }
-
-
-
-
-
-
 
     public void getAllObject(){
         Cursor ocursor=null;
